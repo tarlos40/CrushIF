@@ -6,7 +6,7 @@ import { ChatCircle, DotsThreeOutlineVertical, Heart, PlusCircle, Share } from '
 interface Card {
     isMale: boolean;
     anonymous: boolean;
-    userName: string;
+    userName?: string;
     userPhoto?: string;
     content: string;
     cardPhoto?: string;
@@ -20,7 +20,7 @@ export default function Card(props: Card) {
 
         <section className='flex flex-col justify-center items-center w-full h-auto bg-white dark:bg-black mt-10'>
 
-            <div className="flex flex-col bg-white dark:bg-darkLigth-0 max-w-[500px] min-w-56 w-2/3 h-full pt-5 pl-5 pr-5 rounded-lg justify-center items-center">
+            <div className="flex flex-col bg-ligthWhite-0 dark:bg-darkLigth-0 max-w-[500px] min-w-56 w-2/3 h-full pt-5 pl-5 pr-5 rounded-lg ">
 
                 {/* Section to show user image and name */}
                 <div className="flex flex-row w-full justify-between items-center">
@@ -41,7 +41,7 @@ export default function Card(props: Card) {
                             </Avatar.Fallback>
                         </Avatar.Root>
                         {/* here whe get the user name */}
-                        <h1 className='font-semibold ml-2 text-wrap text-black dark:text-white'>{props.userName}</h1>
+                        <h1 className='font-semibold ml-2 text-wrap text-black dark:text-white text-PostClamp'>{props.userName ? props.userName : "Anônimo"}</h1>
                     </div>
 
                     {/* 
@@ -54,7 +54,7 @@ export default function Card(props: Card) {
                                 null
                             ) :
                             (
-                                <button className='bg-[#F61C7A] font-Roboto font-medium rounded-md text-white text-ButtonPostClamp w-11/12'>SEGUIR</button>
+                                <button className='bg-[#F61C7A] font-Roboto font-medium rounded-md text-white text-ButtonPostClamp p-2 pr-3 pl-3 flex items-center justify-center ml-3'>SEGUIR</button>
                             )
                         }
                         <DotsThreeOutlineVertical weight='fill' className='text-dark dark:text-white h-6 w-6 ' cursor={"pointer"} />
