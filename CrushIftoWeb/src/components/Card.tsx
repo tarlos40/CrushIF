@@ -23,7 +23,7 @@ export default function Card(props: Card) {
             <div className="flex flex-col bg-white dark:bg-darkLigth-0 max-w-[500px] min-w-56 w-2/3 h-full pt-5 pl-5 pr-5 rounded-lg justify-center items-center">
 
                 {/* Section to show user image and name */}
-                <div className="flex flex-row w-full justify-between items-center bg-blue-700">
+                <div className="flex flex-row w-full justify-between items-center">
                     <div className='flex flex-row cursor-pointer w-28'>
                         <Avatar.Root className="bg-blackA1 inline-flex min-w-10 min-h-10 max-h-3 max-w-3 select-none overflow-hidden rounded-full align-middle">
                             <Avatar.Image
