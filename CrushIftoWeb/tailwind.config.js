@@ -5,7 +5,15 @@ export default {
     './index.html'
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'Poppins': ['Poppins', 'sans-serif'],
+        'Oleo': ['Oleo Script', 'sans-serif']
+      },
+      backgroundColor:{
+        'darkLigth': ['#202020']
+      }
+    },
   },
   plugins: [],
 }
