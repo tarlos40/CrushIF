@@ -17,6 +17,12 @@ export default {
         'darkSecond': ['#272727e6']
       },
 
+      borderColor:{
+        'darkLigth': ['#202020'],
+        'ligthWhite' : ['#c3c3c3ab'],
+        'darkSecond': ['#272727e6']
+      },
+
       fontSize:{
         'CrushClamp': "clamp(1.25rem, 1.199rem + 0.355vw, 1.625rem)",
         'IftoClamp': "clamp(1rem, 0.932rem + 0.4734vw, 1.5rem)",
