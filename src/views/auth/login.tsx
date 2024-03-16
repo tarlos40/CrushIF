@@ -1,5 +1,5 @@
-import { ThemeSwitcher } from "./themeSwitcher";
-import { Input } from "@nextui-org/react";
+import { ThemeSwitcher } from "../../components/themeSwitcher";
+import { Button, Input } from "@nextui-org/react";
 import logo from "../../../public/images/CrushIf_Logo-removebg-preview.png"
 
 export default function LoginPage() {
@@ -14,29 +14,25 @@ export default function LoginPage() {
                     <div className="flex flex-col justify-center items-center">
                         <div className="flex flex-row justify-center items-baseline mr-20">
                             <img src={logo} alt="logo crush ifto" className="w-20 h-20" />
-                            <p className="text-black dark:text-white font-Poppins font-semibold text-3xl text-balance" >Crush ifto</p>
+                            <p className="text-black dark:text-white font-Poppins font-semibold text-3xl text-balance text-center" >Crush ifto</p>
                         </div>
-                        <p className="text-black dark:text-white font-semibold font-Poppins text-2xl mt-5">Registre-se</p>
                     </div>
 
                     <div className="flex flex-row justify-center items-center">
-                        <Input type="email" label="email" isClearable className="border-1 border-black rounded w-1/2" />
+                        <Input type="email" label="email" isClearable className="border-1 border-black  w-10/12 max-w-unit-7xl rounded-lg" />
                     </div>
 
                     <div className="flex flex-row justify-center items-center">
-                        <Input type="password" label="senha" className="border-1 border-black rounded w-1/2" />
+                        <Input type="password" label="senha" className="border-1 border-black w-10/12 max-w-unit-7xl rounded-lg" />
                     </div>
 
                     <div className="flex flex-row justify-center items-center">
-                        <Input type="submit" value="entrar" className="border-1 border-black rounded w-1/2" />
+                    <Button color="primary" className="w-1/3 font-Poppins">Entrar</Button>
                     </div>
 
                     <div className="flex flex-row justify-center items-center text-center">
-                        
-                            <p className="text-black dark:text-white font-semibold font-Poppins">Não Possui conta? <a className="text-blue-500 " href="/register">Criar</a></p>
-                        
+                        <p className="text-black dark:text-white font-semibold font-Poppins">Não Possui conta? <a className="text-blue-500 " href="/register">Criar</a></p>
                     </div>
-
 
                 </div>
             </form>

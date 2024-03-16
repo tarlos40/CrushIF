@@ -1,13 +1,13 @@
 import { Navbar, NavbarBrand, NavbarContent, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu, Avatar, Link } from "@nextui-org/react";
 import useravatar from "../../public/images/RafaelImage.png"
 import logo from "../../public/images/CrushIf_Logo-removebg-preview.png";
-import { ThemeSwitcher } from "../views/public/themeSwitcher";
+import { ThemeSwitcher } from "./themeSwitcher";
 
 
-export function DefaultNavBar() {
+export function NavBar() {
     return (
         <>
-        <Navbar>
+        <Navbar className="bg-gray-200 dark:bg-zinc-800">
             <NavbarBrand>
                 <ThemeSwitcher />
             </NavbarBrand>
@@ -19,7 +19,7 @@ export function DefaultNavBar() {
             </NavbarContent>
 
             <NavbarContent as="div" justify="end">
-                <Dropdown placement="bottom-end">
+                <Dropdown className="bg-gray-300 dark:bg-zinc-800" placement="bottom-end">
                     <DropdownTrigger>
                         <Avatar
                             isBordered
@@ -36,10 +36,10 @@ export function DefaultNavBar() {
                             <p className="font-semibold">Signed in as</p>
                             <p className="font-semibold">deoliverrafa@gmail.com</p>
                         </DropdownItem>
-                        <DropdownItem key="settings" href="/settings">Configurações</DropdownItem>
-                        <DropdownItem key="team_settings">Denunciar</DropdownItem>
-                        <DropdownItem key="help_and_feedback">Feedback</DropdownItem>
-                        <DropdownItem key="logout" color="danger" href="/login">
+                        <DropdownItem key="settings" className="font-Poppins" href="/settings">Configurações</DropdownItem>
+                        <DropdownItem key="team_settings" className="font-Poppins" color="secondary">Denunciar</DropdownItem>
+                        <DropdownItem key="help_and_feedback" className="font-Poppins" color="secondary">Feedback</DropdownItem>
+                        <DropdownItem key="logout" className='text-red-500 font-Poppins' color="danger" href="/auth/login">
                             Log Out
                         </DropdownItem>
                     </DropdownMenu>

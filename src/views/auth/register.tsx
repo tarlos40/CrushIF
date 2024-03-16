@@ -1,5 +1,5 @@
-import { ThemeSwitcher } from "./themeSwitcher";
-import { Select, SelectItem } from "@nextui-org/react";
+import { ThemeSwitcher } from "../../components/themeSwitcher";
+import { Button, Select, SelectItem } from "@nextui-org/react";
 import { Input } from "@nextui-org/react";
 import logo from "../../../public/images/CrushIf_Logo-removebg-preview.png"
 
@@ -62,8 +62,6 @@ export default function RegisterPage() {
         "IFTO"
     ];
 
-    console.log("renderizou");
-
 
     return (
         <div className="flex flex-col w-full h-full bg-gray-200 dark:bg-zinc-900">
@@ -76,31 +74,31 @@ export default function RegisterPage() {
                     <div className="flex flex-col justify-center items-center">
                         <div className="flex flex-row justify-center items-baseline mr-20">
                             <img src={logo} alt="logo crush ifto" className="w-20 h-20" />
-                            <p className="text-black dark:text-white font-Poppins font-semibold text-3xl" >Crush ifto</p>
+                            <p className="text-black dark:text-white font-Poppins font-semibold text-3xl text-center" >Crush ifto</p>
                         </div>
                         <p className="text-black dark:text-white font-semibold font-Poppins text-2xl mt-5">Registre-se</p>
                     </div>
 
                     <div className="flex flex-row justify-center items-center">
-                        <Input type="text" label="nickname" placeholder="deolvierrafa" isClearable className="w-1/2" name="nickname" />
+                        <Input type="text" label="nickname" placeholder="" isClearable className="w-1/2 border-1 border-zinc-900 rounded-lg" name="nickname" autoComplete="@gmail.com" />
                     </div>
 
                     <div className="flex flex-row justify-center items-center">
-                        <Input type="email" label="email" isClearable className="w-1/2" name="email" />
+                        <Input type="email" label="email" placeholder="" isClearable className="w-1/2 border-1 border-zinc-900 rounded-lg" name="email" />
                     </div>
 
                     <div className="flex flex-row justify-center items-center">
-                        <Input type="password" label="senha" className="w-1/2" name="password" />
+                        <Input type="password" label="senha" className="w-1/2 border-1 border-zinc-900 rounded-lg" name="password" />
                     </div>
 
                     <div className="flex flex-row justify-center items-center ">
-                        <Input type="date" label="nascimento" className="w-1/2" name="birthDayData" />
+                        <Input type="date" label="nascimento" className="w-1/2 border-1 border-zinc-900 rounded-lg" name="birthDayData" />
                     </div>
 
                     <div className="flex flex-row justify-center items-center ">
                         <div className="flex w-full justify-center items-center ">
                             <Select
-                                label="Selecione seu Instituto"
+                                label="Instituto"
                                 className="w-1/2"
                             >
                                 {institutosFederaisPorEstado.map((instituto) => (
@@ -113,7 +111,7 @@ export default function RegisterPage() {
                     </div>
 
                     <div className="flex flex-row justify-center items-center">
-                        <Input type="submit" value="criar" className="border-1 border-black rounded w-1/2" />
+                        <Button color="primary" className="w-1/3 font-Poppins">Criar</Button>
                     </div>
 
 

@@ -1,10 +1,10 @@
-import { DefaultNavBar } from "../../components/defaultNavBar";
+import { NavBar } from "../../components/navbar";
 import BaseUserShow from "../../components/baseUserShow";
 
 export default function UserBasePage() {
     return (
         <>
-            <DefaultNavBar />
+            <NavBar />
             <BaseUserShow />
         </>
     )

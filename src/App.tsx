@@ -11,8 +11,8 @@ import HomePage from './views/public/home.tsx';
 // IMPORT - STYLES //
 import './styles/main.css'
 import UserBasePage from "./views/public/userBasePage.tsx";
-import LoginPage from "./views/public/login.tsx";
-import RegisterPage from "./views/public/register.tsx";
+import LoginPage from "./views/auth/login.tsx";
+import RegisterPage from "./views/auth/register.tsx";
 
 // FUNCTION - APP //
 function App() {
@@ -25,8 +25,8 @@ function App() {
             <Routes>
               <Route path='/' element={<HomePage />} />
               <Route path='/user' element={<UserBasePage />} />
-              <Route path='/login' element={<LoginPage />} />
-              <Route path='/register' element={<RegisterPage />} />
+              <Route path='/auth/login' element={<LoginPage />} />
+              <Route path='/auth/register' element={<RegisterPage />} />
             </Routes>
           </Router>
         </NextThemesProvider>
