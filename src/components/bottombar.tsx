@@ -75,7 +75,7 @@ export function Bottombar() {
                                 <div className="cursor-pointer flex flex-col justify-center items-center">
                                     <Badge className='font-Poppins' content="10" shape="circle" color="secondary" showOutline={false}>
                                         <i className="fi fi-sr-home text-2xl mt-1 bg-gradient-to-br text-transparent bg-clip-text from-purple-400 via-purple-600 to-purple-800 dark:from-purple-400 dark:via-purple-500 dark:to-purple-600"></i>
-                                    </Badge>    
+                                    </Badge>
                                 </div>
                             </>
                         )
