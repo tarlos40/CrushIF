@@ -1,47 +1,40 @@
 import { NavBar } from "../../components/navbar";
 import { Bottombar } from "../../components/bottombar";
 import { getUserData } from "../../utils/getUserData";
-
-interface User {
-    _id: string
-    nickname: string
-    email: string
-    campus: string
-}
+import Card from "../../components/card";
+import { Spinner } from "@nextui-org/react";
 
 export default function HomePage() {
 
-    // const [userData, setUserData] = useState<User | null>(null);
+    const cardData = {
+        _id: "123981391",
+        nickname: "deoliverrafa",
+        email: "deoliverrafa@gmail.com",
+        campus: "IFTO",
+        references: ["#IFTO", "#ÉOCRUSH"],
+        content: "PostTextPostTextPostTextPostTextPostTextPostTextPostTextPostTextPostTextPostTextPostTextPostTextPostTextPostTextPostTextPostTextPostTextPostTextPostText  "
+    }
 
-    // function getUserData() {
-    //     useEffect(() => {
-    //         async function getData() {
-    //             const userId = localStorage.getItem("userId");
+    const userData = getUserData();
 
-    //             if (!userId || userId == "null") {
-    //                 window.location.href = "/auth/login"
-    //                 return;
-    //             }
+    if (!userData) {
+        return (
+            <>
+                <main className="bg-gray-200 dark:bg-zinc-700 my-14 p-5 h-auto w-full flex flex-col justify-center items-center">
+                    <Spinner />
+                </main>
+            </>
+        )
+    }
 
-    //             const response = await axios.get(`http://localhost:4040/user/${userId}`);
-
-    //             setUserData(response.data.userFinded);
-    //         }
-    //         getData();
-
-    //     }, []);
-    // }
-
-    const userData = getUserData()
-
-    console.log(userData);
-    
     return (
         <>
-            <NavBar user={userData} />
+            <NavBar user={cardData} />
 
-            <main className="bg-gray-200 dark:bg-zinc-800 my-14 p-5 h-full w-full">
+            <main className="bg-gray-200 dark:bg-zinc-700 my-14 p-5 h-auto w-full flex flex-col justify-center items-center">
+                {/* <CardExample /> */}
 
+                <Card CardData={cardData} />
             </main>
 
             <Bottombar />

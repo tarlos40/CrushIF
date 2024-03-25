@@ -20,6 +20,8 @@ export function getUserData() {
                 return;
             }
 
+
+            
             const response = await axios.get(`http://localhost:4040/user/${userId}`);
 
             setUserData(response.data.userFinded);

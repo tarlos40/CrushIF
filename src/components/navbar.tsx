@@ -22,12 +22,12 @@ export function NavBar(props: userData) {
 
     return (
         <>
-            <Navbar className="bg-gray-200 dark:bg-zinc-800">
+            <Navbar className="bg-gray-100 dark:bg-zinc-800 shadow-sm" >
                 <NavbarBrand>
                     <ThemeSwitcher />
                 </NavbarBrand>
 
-                <NavbarContent className="hidden sm:flex gap-4" justify="center">
+                <NavbarContent className="" justify="center">
                     <Link href="/">
                         <img src={logo} alt="" className="w-10" />
                     </Link>
